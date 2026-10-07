@@ -126,21 +126,6 @@ git clone git@github.com:natasapaul781-tech/haflower.git
 
 ---
 
-### 3.2 方式一：编译成"免安装单文件版"（推荐）
-
-这条命令会把程序编译成**一个 exe 文件**，里面自带 .NET 运行时——拷到任何 Windows 10/11 电脑上都能直接双击运行，**不需要对方装 .NET**：
-
-```powershell
-cd haflower
-dotnet publish main\src\CleanC\CleanC.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o dist
-```
-
-编译完成后，可执行文件在：
-
-```
-haflower\dist\CleanC.exe        ← 约 157 MB（自带运行时，所以体积大）
-```
-
 双击 `dist\CleanC.exe` 即可运行。**建议把这个 exe 单独复制到一个固定文件夹**（例如 `D:\Tools\CleanC\`），因为程序会在自己所在目录写日志。
 
 > **ARM64 电脑**（如 Surface Pro X）把 `-r win-x64` 换成 `-r win-arm64`。
