@@ -5,12 +5,6 @@
 
 **仓库地址：** <https://github.com/natasapaul781-tech/haflower>
 
-<p align="center">
-  <img src="image/xiaohonghua.jpg" alt="腾讯公益 · 小红花" width="230">
-  <br>
-  <sub>程序每次启动会展示一次公益捐赠海报，按任意键或点击任意位置即可关闭，不影响任何功能。</sub>
-</p>
-
 ---
 
 ## 目录
