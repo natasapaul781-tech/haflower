@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>CleanC</AssemblyName>
+    <RootNamespace>CleanC</RootNamespace>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <LangVersion>latest</LangVersion>
+    <Version>1.0.0</Version>
+    <Product>C盘清理工具</Product>
+    <AssemblyTitle>C盘清理工具</AssemblyTitle>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 腾讯公益“小红花”捐款二维码海报：嵌入程序集，单文件发布也可读取 -->
+    <EmbeddedResource Include="..\..\image\xiaohonghua.jpg" LogicalName="CleanC.Resources.xiaohonghua.jpg" />
+  </ItemGroup>
+
+</Project>

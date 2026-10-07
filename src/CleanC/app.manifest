@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <assemblyIdentity version="1.0.0.0" name="CleanC.app"/>
+
+  <!--
+    以**普通权限**启动（asInvoker）。
+    为什么不再用 requireAdministrator：那样在没有管理员凭据的电脑上（企业里的标准用户账户）
+    程序会**根本打不开**——双击只弹 UAC，取消就什么都没有；而绝大多数功能（用户临时文件、
+    各类缓存、占用分析、软件列表）本来就不需要管理员。需要管理员的动作（磁盘分区、
+    系统级清理、卸载系统级软件）改为在用到时由界面提示并按需提权。
+  -->
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- 该 GUID 同时覆盖 Windows 10 与 Windows 11 -->
+      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/>
+    </application>
+  </compatibility>
+
+  <application xmlns="urn:schemas-microsoft-com:asm.v3">
+    <windowsSettings>
+      <!-- 长路径感知：深层 node_modules / 构建产物统计更完整（超过 260 字符的路径也能遍历） -->
+      <longPathAware xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">true</longPathAware>
+      <!--
+        高 DPI 不在清单里声明：由 csproj 的 ApplicationHighDpiMode=PerMonitorV2 →
+        ApplicationConfiguration.Initialize() 在创建任何窗口之前设置（.NET 对此有专门的分析器
+        WFAC010 要求二者只留一处，重复声明反而会让运行时的设置静默失效）。
+      -->
+    </windowsSettings>
+  </application>
+</assembly>
