@@ -5,7 +5,7 @@ Windows 图形界面的 **C 盘清理与磁盘治理工具**：清理垃圾、�
 C# / .NET 8 + WinForms，**无第三方依赖**，纯离线运行。默认以**普通权限**启动，只在真正需要管理员时才申请提权。
 
 ---
-- 📖 **[下载地址]([https://github.com/natasapaul781-tech/haflower/releases/tag/V1.00](https://github.com/natasapaul781-tech/haflower/releases/tag/V1.01))** —— 点击跳转下载可直接运行的.exe文件（目前仅支持windowsx64）
+- 📖 **[下载地址](https://github.com/natasapaul781-tech/haflower/releases/tag/V1.00](https://github.com/natasapaul781-tech/haflower/releases/tag/V1.01)** —— 点击跳转下载可直接运行的.exe文件（目前仅支持windowsx64）
 
 ## 目录
 
